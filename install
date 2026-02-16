@@ -4,13 +4,9 @@ echo "Made By Jikoz"
 
 # Command
 
-sudo apt update && sudo apt upgrade -y
-
-sudo apt install xfce4 xfce4-goodies xrdp -y
-
-echo "startxfce4" > ~/.xsession
-sudo chown $(whoami):$(whoami) ~/.xsession
-
-
-sudo systemctl enable xrdp
-sudo systemctl restart xrdp
+apt update && apt install -y git sshpass && \
+git clone https://github.com/dpworldog/tunnel && \
+chmod +x tunnel/tunnel && \
+mv tunnel/tunnel /usr/local/bin/tunnel && \
+rm -rf tunnel && \
+echo "Installed successfully ✅  Run: tunnel 22
