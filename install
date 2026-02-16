@@ -4,9 +4,14 @@ echo "Made By Jikoz"
 
 # Command
 
-apt update && apt install -y git sshpass && \
-git clone https://github.com/dpworldog/tunnel && \
-chmod +x tunnel/tunnel && \
-mv tunnel/tunnel /usr/local/bin/tunnel && \
-rm -rf tunnel && \
-echo "Installed successfully ✅  Run: tunnel 22
+apt update && apt install -y git sshpass
+
+git clone https://github.com/dpworldog/tunnel
+
+chmod +x tunnel/tunnel
+
+mv tunnel/tunnel /usr/local/bin/tunnel
+
+rm -rf tunnel
+
+echo "Installed successfully ✅  Run: tunnel 22"
